@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const TabsComponent = () => {
+const TabsComponent = ({ toggleShoWHeart, toggleShowVanilla,toggleShowChoco,toggleShowStrawberry,toggleShowTopping1 }) => {
   const [activeTab, setActiveTab] = useState('tab1');
 
   const handleTabClick = (tab) => {
@@ -38,7 +38,7 @@ const TabsComponent = () => {
             onClick={() => handleTabClick('tab3')}
             href="#"
           >
-            Extras
+            Topping
           </a>
         </li>
       </ul>
@@ -46,25 +46,21 @@ const TabsComponent = () => {
         <div className={`tab-pane ${activeTab === 'tab1' ? 'active' : ''}`}>
           <h4>Shapes</h4>
           <div className="icon-column">
-            <img src={cakeIconSrc} alt="Icon" />
-            <img src={cakeIconSrc} alt="Icon" />
-            <img src={cakeIconSrc} alt="Icon" />
+            <img src={cakeIconSrc} alt="Icon" onClick={toggleShoWHeart} />
           </div>
         </div>
         <div className={`tab-pane ${activeTab === 'tab2' ? 'active' : ''}`}>
           <h4>Flavors</h4>
           <div className="icon-column">
-            <img src={cakeIconSrc} alt="Icon" />
-            <img src={cakeIconSrc} alt="Icon" />
-            <img src={cakeIconSrc} alt="Icon" />
+            <img src={cakeIconSrc} alt="Icon" onClick={toggleShowChoco} />
+            <img src={cakeIconSrc} alt="Icon" onClick={toggleShowStrawberry}/>
+            <img src={cakeIconSrc} alt="Icon" onClick={toggleShowVanilla}/>
           </div>
         </div>
         <div className={`tab-pane ${activeTab === 'tab3' ? 'active' : ''}`}>
-          <h4>Extras</h4>
+          <h4>Topping</h4>
           <div className="icon-column">
-            <img src={cakeIconSrc} alt="Icon" />
-            <img src={cakeIconSrc} alt="Icon" />
-            <img src={cakeIconSrc} alt="Icon" />
+            <img src={cakeIconSrc} alt="Icon" onClick={toggleShowTopping1}/>
           </div>
         </div>
       </div>

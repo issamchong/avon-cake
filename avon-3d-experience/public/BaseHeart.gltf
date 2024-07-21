@@ -58,8 +58,8 @@
     "extras": {
       "author": "funnyeducomics (https://sketchfab.com/funnyeducomics)",
       "license": "SKETCHFAB Standard (https://sketchfab.com/licenses)",
-      "source": "https://sketchfab.com/3d-models/cake-centered-848cabc652db41069be67b13c10b94cb",
-      "title": "Cake-centered"
+      "source": "https://sketchfab.com/3d-models/cake-centered-original-color-b5970306c4bc4dca84c546b90ee7fe39",
+      "title": "Cake-centered-original Color"
     },
     "generator": "Sketchfab-16.21.0",
     "version": "2.0"
@@ -97,12 +97,12 @@
   "materials": [
     {
       "doubleSided": true,
-      "name": "plateblinn1SG",
+      "name": "blinn1SG",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.41,
-          0.16,
-          0.13,
+          0.92,
+          0.82,
+          0.74,
           1.0
         ],
         "metallicFactor": 0.0
@@ -155,7 +155,7 @@
       "children": [
         2
       ],
-      "name": "cake-centered.obj.cleaner.materialmerger.gles"
+      "name": "cake-centered-originalColor.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,

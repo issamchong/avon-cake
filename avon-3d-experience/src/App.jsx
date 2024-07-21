@@ -1,20 +1,33 @@
-import { useState } from 'react'
-import { Canvas } from '@react-three/fiber';
+import { useState,useRef, useEffect } from 'react'
+import { Canvas,useThree } from '@react-three/fiber';
 import { ContactShadows, Environment, OrbitControls, Stage } from '@react-three/drei'
 import ChocoHeart from './components/ChocoHeart';
-import StrawberryHeart from './components/StrawberryHeart'
+import Strawberry from './components/Strawberry';
 import TabsComponent from './components/Tabs';
 import Topping1 from './components/Topping1';
 import BaseHeart from './components/BaseHeart';
 import './App.css'
 
 function App() {
-  const [ShowHeart , setShowHeart ] = useState(false);
+  const [ShowHeart , setShowHeart ] = useState(true);
   const [ShowChoco , setShowChoco ] = useState(false);
   const [ShowVanilla , setShowVanilla ] = useState(false);
-  const [ShowStrawberry , setShowStrawberry ] = useState(true);
-  const [ShowTopping1 , setShowTopping1 ] = useState(true);
+  const [ShowStrawberry , setShowStrawberry ] = useState(false);
+  const [ShowTopping1 , setShowTopping1 ] = useState(false);
   const [price, setPrice] = useState(10);
+  const cameraRef = useRef();
+
+
+  const CameraSetup = () => {
+    const { camera } = useThree();
+  
+    useEffect(() => {
+      camera.position.set(Math.sin(Math.PI / 4) * 10, Math.sin(Math.PI / 4) * 10, Math.cos(Math.PI / 4) * 10);
+      camera.lookAt(0, 0, 0);
+    }, [camera]);
+  
+    return null;
+  };
 
 
   const updatePrice = (isAdding, amount) => {
@@ -46,26 +59,17 @@ function App() {
   };
   const toggleShowChoco = () => {
 
-    if (ShowChoco) {
-      setShowVanilla(false);
-      setShowStrawberry(false);
-      setShowTopping1(false)
+  
 
-    }
-
-    setShowChoco(ShowChoco);
+    setShowChoco(!ShowChoco);
+    setShowStrawberry(false);
     updatePrice(!ShowChoco, 7); // Assume Choco2 has a price of 7
 
   };
   const toggleShowStrawberry = () => {
 
-    if (ShowStrawberry ) {
-      setShowChoco(false);
-      setShowVanilla(false);
-      setShowTopping1(false)
 
-    }
-    setShowStrawberry(ShowStrawberry);
+    setShowStrawberry(!ShowStrawberry);
     updatePrice(!ShowStrawberry, 8); // Assume Choco3 has a price of 8
 
   };
@@ -84,28 +88,30 @@ function App() {
         Avon Cake
       </h1>
     </div>
-    <Canvas>
+    <Canvas camera={{ position: [0, 0, 10], fov: 10 }} ref={cameraRef}>
       <ambientLight />
       <OrbitControls enableZoom={false}  
-        minAzimuthAngle={-Math.PI / 1}
-        maxAzimuthAngle={Math.PI / 1}
+        minAzimuthAngle={-Math.PI / 2}
+        maxAzimuthAngle={Math.PI / 2}
         rotateSpeed={0.5}            // Adjust the speed as needed (default is 1.0)
         minPolarAngle={0}
-        maxPolarAngle={Math.PI / 3}/>
+        maxPolarAngle={Math.PI /2}/>
       <Stage >
       
-          {ShowHeart && <BaseHeart  />}
+          <BaseHeart  />
           {ShowTopping1 && <Topping1 /> }
+          {ShowStrawberry && <Strawberry /> }
+          {ShowChoco && <ChocoHeart /> }
+
+      <CameraSetup />
       </Stage>
       <Environment preset="sunset" />
-      <ContactShadows position={[0,0,0]} opacity={1} scale={10}  bluar={1} far={10} resolution={256} color= "00000" />
+      <ContactShadows position={[0,0.5,0]} opacity={1} scale={10}  bluar={1} far={10} resolution={256} color= "00000" />
     </Canvas>
     <div className="App">
  
       <main>
         <TabsComponent 
-          toggleShoWHeart={toggleShoWHeart}
-          toggleShowVanilla = {toggleShowVanilla}
           toggleShowChoco ={toggleShowChoco}
           toggleShowStrawberry = {toggleShowStrawberry}
           toggleShowTopping1 = {toggleShowTopping1}

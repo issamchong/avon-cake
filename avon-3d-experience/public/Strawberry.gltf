@@ -5,14 +5,14 @@
       "componentType": 5126,
       "count": 1154,
       "max": [
-        -2.5057449340820313,
-        3.4416608810424805,
-        0.5304179787635803
+        1.1811250448226929,
+        1.0213379859924316,
+        0.26520898938179016
       ],
       "min": [
-        -4.867994785308838,
-        1.3989850282669067,
-        0.0
+        -1.1811250448226929,
+        -1.0213379859924316,
+        -0.26520898938179016
       ],
       "type": "VEC3"
     },
@@ -58,10 +58,10 @@
     "extras": {
       "author": "funnyeducomics (https://sketchfab.com/funnyeducomics)",
       "license": "SKETCHFAB Standard (https://sketchfab.com/licenses)",
-      "source": "https://sketchfab.com/3d-models/strawberry-heart-199f16f2b586450f9a560bdf7449a45a",
-      "title": "Strawberry-heart"
+      "source": "https://sketchfab.com/3d-models/cake-centered-strawberry-color-40ec80e59f0145309ccea2ce8a1088c5",
+      "title": "Cake-centered- Strawberry Color"
     },
-    "generator": "Sketchfab-16.17.0",
+    "generator": "Sketchfab-16.21.0",
     "version": "2.0"
   },
   "bufferViews": [
@@ -91,35 +91,21 @@
   "buffers": [
     {
       "byteLength": 64576,
-      "uri": "StrawberryHeart.bin"
+      "uri": "Strawberry.bin"
     }
-  ],
-  "extensionsUsed": [
-    "KHR_materials_specular"
   ],
   "materials": [
     {
       "doubleSided": true,
-      "extensions": {
-        "KHR_materials_specular": {
-          "specularColorFactor": [
-            1.0,
-            1.0,
-            1.0
-          ],
-          "specularFactor": 0.5958113396155111
-        }
-      },
-      "name": "pasted__pasted__blinn1SG",
+      "name": "blinn1SG",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.94,
-          0.66,
-          0.92,
+          1.0,
+          0.4,
+          0.47,
           1.0
         ],
-        "metallicFactor": 0.4678109495190842,
-        "roughnessFactor": 0.35809632943643255
+        "metallicFactor": 0.0
       }
     }
   ],
@@ -169,7 +155,7 @@
       "children": [
         2
       ],
-      "name": "strawberry-heart.obj.cleaner.materialmerger.gles"
+      "name": "cake-centered-StrawberryColor.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,

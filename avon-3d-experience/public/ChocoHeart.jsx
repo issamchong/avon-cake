@@ -10,7 +10,7 @@ Title: Cake-centered- Chocolate Color
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function ChocoHeart(props) {
+export function Model(props) {
   const { nodes, materials } = useGLTF('/ChocoHeart.gltf')
   return (
     <group {...props} dispose={null}>
@@ -19,4 +19,4 @@ export function ChocoHeart(props) {
   )
 }
 
-export default ChocoHeart;
+useGLTF.preload('/ChocoHeart.gltf')

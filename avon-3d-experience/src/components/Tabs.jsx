@@ -9,7 +9,12 @@ const TabsComponent = ({ toggleShoWHeart, toggleShowVanilla,toggleShowChoco,togg
   };
 
   // Direct path to the image in the public/icons folder
-  const cakeIconSrc = '/icons/cake.ico';
+  const BaseIcon = '/icons/Base.ico';
+  const CocoHeartIcon = '/icons/Choco.ico';
+  const StrawberryIcon = '/icons/Strawberry.ico';
+  const Topping1Icon = '/icons/Topping1.ico';
+
+
 
   return (
     <div>
@@ -46,21 +51,20 @@ const TabsComponent = ({ toggleShoWHeart, toggleShowVanilla,toggleShowChoco,togg
         <div className={`tab-pane ${activeTab === 'tab1' ? 'active' : ''}`}>
           <h4>Shapes</h4>
           <div className="icon-column">
-            <img src={cakeIconSrc} alt="Icon" onClick={toggleShoWHeart} />
+            <img src={BaseIcon} alt="Icon" onClick={toggleShoWHeart} />
           </div>
         </div>
         <div className={`tab-pane ${activeTab === 'tab2' ? 'active' : ''}`}>
           <h4>Flavors</h4>
           <div className="icon-column">
-            <img src={cakeIconSrc} alt="Icon" onClick={toggleShowChoco} />
-            <img src={cakeIconSrc} alt="Icon" onClick={toggleShowStrawberry}/>
-            <img src={cakeIconSrc} alt="Icon" onClick={toggleShowVanilla}/>
+            <img src={CocoHeartIcon} alt="Icon" onClick={toggleShowChoco} />
+            <img src={StrawberryIcon} alt="Icon" onClick={toggleShowStrawberry}/>
           </div>
         </div>
         <div className={`tab-pane ${activeTab === 'tab3' ? 'active' : ''}`}>
           <h4>Topping</h4>
           <div className="icon-column">
-            <img src={cakeIconSrc} alt="Icon" onClick={toggleShowTopping1}/>
+            <img src={Topping1Icon} alt="Icon" onClick={toggleShowTopping1}/>
           </div>
         </div>
       </div>

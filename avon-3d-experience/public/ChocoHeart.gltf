@@ -5,14 +5,14 @@
       "componentType": 5126,
       "count": 1154,
       "max": [
-        -2.5057449340820313,
-        0.7431880235671997,
-        0.5304179787635803
+        1.1811250448226929,
+        1.0213379859924316,
+        0.26520898938179016
       ],
       "min": [
-        -4.867994785308838,
-        -1.2994879484176636,
-        0.0
+        -1.1811250448226929,
+        -1.0213379859924316,
+        -0.26520898938179016
       ],
       "type": "VEC3"
     },
@@ -58,10 +58,10 @@
     "extras": {
       "author": "funnyeducomics (https://sketchfab.com/funnyeducomics)",
       "license": "SKETCHFAB Standard (https://sketchfab.com/licenses)",
-      "source": "https://sketchfab.com/3d-models/chocolate-heart-0ce93da4a08348ee9893edad07326390",
-      "title": "Chocolate-heart"
+      "source": "https://sketchfab.com/3d-models/cake-centered-chocolate-color-401b9826ad8a41849040577b19f6a29a",
+      "title": "Cake-centered- Chocolate Color"
     },
-    "generator": "Sketchfab-16.17.0",
+    "generator": "Sketchfab-16.21.0",
     "version": "2.0"
   },
   "bufferViews": [
@@ -91,35 +91,21 @@
   "buffers": [
     {
       "byteLength": 64576,
-      "uri": "Choco-heart.bin"
+      "uri": "ChocoHeart.bin"
     }
-  ],
-  "extensionsUsed": [
-    "KHR_materials_specular"
   ],
   "materials": [
     {
       "doubleSided": true,
-      "extensions": {
-        "KHR_materials_specular": {
-          "specularColorFactor": [
-            1.0,
-            1.0,
-            1.0
-          ],
-          "specularFactor": 0.8640026331508819
-        }
-      },
       "name": "blinn1SG",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.21815952230455524,
-          0.07456733762843291,
-          0.05831111291047125,
+          0.42,
+          0.11,
+          0.03,
           1.0
         ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.16914337262742132
+        "metallicFactor": 0.0
       }
     }
   ],
@@ -169,7 +155,7 @@
       "children": [
         2
       ],
-      "name": "chocolate-heart.obj.cleaner.materialmerger.gles"
+      "name": "cake-centered-ChocolateColor.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,

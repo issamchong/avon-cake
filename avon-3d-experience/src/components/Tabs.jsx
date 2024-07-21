@@ -9,10 +9,10 @@ const TabsComponent = ({ toggleShoWHeart, toggleShowVanilla,toggleShowChoco,togg
   };
 
   // Direct path to the image in the public/icons folder
-  const BaseIcon = '/icons/Base.ico';
-  const CocoHeartIcon = '/icons/Choco.ico';
-  const StrawberryIcon = '/icons/Strawberry.ico';
-  const Topping1Icon = '/icons/Topping1.ico';
+  const BaseIcon = '/icons/BaseHeart.png';
+  const CocoHeartIcon = '/icons/ChocoHeart.png';
+  const StrawberryIcon = '/icons/StrawberryHeart.png';
+  const Topping1Icon = '/icons/Topping1Heart.png';
 
 
 
